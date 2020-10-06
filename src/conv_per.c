@@ -6,13 +6,13 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 13:49:33 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 16:56:44 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/06 17:19:31 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-t_flag	ft_print_percent(t_flag modif)
+t_flag	ft_conv_per(t_flag modif)
 {
 	int i;
 
