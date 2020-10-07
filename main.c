@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 16:45:32 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/02 14:06:37 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/07 12:38:15 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	main(void)
 	ft_printf("\033[1;33mft_printf:\033[0m"			"%*c/\n\n", 5,c);
 
 	printf("\033[38;5;46mString test\033[0m\n");
-	printf("\033[1;33mprintf   :\033[0m"			"%-*.*s/\n", 12, 5, s);
-	ft_printf("\033[1;33mft_printf:\033[0m"			"%-*.*s/\n\n", 12, 5,s);
+	printf("\033[1;33mprintf   :\033[0m"			"%-*.*s/\n", 9, 5, s);
+	ft_printf("\033[1;33mft_printf:\033[0m"			"%-*.*s/\n\n", 9, 5, s);
 
 	printf("\033[38;5;46mDigit test\033[0m\n");
 	printf("\033[1;33mprintf   :\033[0m"			"%*.*i/\n", 5, 1, i);

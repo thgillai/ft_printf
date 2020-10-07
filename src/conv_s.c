@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 10:47:18 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 16:58:19 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/07 12:33:35 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,9 @@ t_flag	ft_conv_s(t_flag modif, va_list argp)
 	str = va_arg(argp, void *);
 	if (!str)
 		str = "(null)";
-	if (modif.zero == 1 && modif.minus == 1 && str)
+	if (modif.minus == 1 && str)
 		ft_conv_s1(modif, str);
-	if (modif.zero == 0 && modif.minus == 0 && str)
+	if (modif.minus == 0 && str)
 		ft_conv_s0(modif, str);
 	if (modif.preci >= ft_len(str) && modif.width <= ft_len(str))
 		ft_putstr(str);
