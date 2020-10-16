@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 13:47:42 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 16:57:47 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/16 13:42:07 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ t_flag	ft_conv_p(t_flag modif, va_list args)
 		write(1, "0x", 2);
 		ft_putnbr_base(nb, base, ft_16(nb), modif);
 	}
+	bis(modif, args, i, nb, base);
+}
+
+t_flag	bis(t_flag modif, va_list args, int i, unsigned long int nb, char *base)
+{
 	if (modif.width > ft_16(nb) && modif.minus == 0)
 	{
 		while (++i < modif.width - ft_16(nb) - 2)

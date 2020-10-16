@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 13:31:03 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 17:03:39 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/16 13:42:37 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ t_flag			ft_len_s(t_flag modif, char *str);
 t_flag			ft_conv_xX(t_flag modif, va_list args, char c);
 t_flag			ft_conv_u(t_flag modif, va_list args);
 t_flag			ft_conv_p(t_flag modif, va_list args);
+t_flag			bis(t_flag modif, va_list args, int i,
+					unsigned long int nb, char *base);
 t_flag			ft_conv_per(t_flag modif);
 t_flag			ft_verif(t_flag modif);
 int				ft_16(unsigned long int nb);
