@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
+/*   By: thgillai <thgillai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 17:55:33 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/02 13:45:11 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/16 16:07:57 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,13 @@ int	ft_atoi(char *str)
 	if (result > LONG_MAX)
 		return (0);
 	return (result);
+}
+
+int	ft_lgth(long int nb)
+{
+	if (nb < 0)
+		return (1 + ft_lgth(nb * (-1)));
+	if (nb > 9)
+		return (1 + ft_lgth(nb / 10));
+	return (1);
 }

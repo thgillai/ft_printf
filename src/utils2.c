@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
+/*   By: thgillai <thgillai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/01 15:36:32 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 17:04:42 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/16 16:00:47 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,11 @@ t_flag		ft_len_s(t_flag modif, char *str)
 	if (modif.preci != -1 && modif.width > 0 && str)
 	{
 		if (modif.preci > modif.width && modif.preci >= ft_len(str))
-			modif.length += modif.width < ft_len(str) ? ft_len(str) : modif.width;
+			modif.length += modif.width < ft_len(str) ?
+			ft_len(str) : modif.width;
 		else if (modif.preci > modif.width && modif.preci < ft_len(str))
-			modif.length += modif.width < ft_len(str) ? modif.preci : modif.width;
+			modif.length += modif.width < ft_len(str) ?
+			modif.preci : modif.width;
 		else
 			modif.length += modif.width;
 	}
