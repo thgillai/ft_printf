@@ -6,21 +6,14 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 13:47:42 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/19 15:05:29 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 15:31:21 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-t_flag	ft_conv_p(t_flag modif, va_list args)
+t_flag	ft_conv_p1(t_flag modif, int i, unsigned long int nb, char *base)
 {
-	int					i;
-	unsigned long int	nb;
-	char				*base;
-
-	i = -1;
-	base = "0123456789abcdef";
-	nb = va_arg(args, long);
 	if (nb == 0 && modif.preci == 0)
 	{
 		ft_putstr("0x");
@@ -46,7 +39,22 @@ t_flag	ft_conv_p(t_flag modif, va_list args)
 		while (++i < modif.width - ft_16(nb) - 2)
 			ft_putchar(' ');
 	}
+	return (modif);
+}
+
+t_flag	ft_conv_p(t_flag modif, va_list args)
+{
+	int					i;
+	unsigned long int	nb;
+	char				*base;
+
+	i = -1;
+	base = "0123456789abcdef";
+	nb = va_arg(args, long);
+	ft_conv_p1(modif, i, nb, base);
 	modif.length += modif.width > ft_16(nb) ? modif.width : ft_16(nb) + 2;
 	modif.length += modif.width == ft_16(nb) + 1 ? 1 : 0;
 	return (modif);
 }
+
+
