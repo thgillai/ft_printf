@@ -6,14 +6,14 @@
 #    By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/17 15:42:17 by thgillai          #+#    #+#              #
-#    Updated: 2020/10/02 13:52:10 by thgillai         ###   ########.fr        #
+#    Updated: 2020/10/19 13:51:16 by thgillai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCDIR	= ./src
 
 SRCS	= conv_c.c conv_per.c conv_s.c ft_printf.c utils.c utils2.c conv_id.c \
-		conv_u.c conv_p.c conv_xX.c utils3.c
+		conv_u.c conv_p.c conv_x.c utils3.c
 
 OBJS	= $(addprefix $(SRCDIR)/, $(SRCS:.c=.o))
 

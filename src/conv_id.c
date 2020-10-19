@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 17:04:28 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/19 13:45:58 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 13:50:46 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,5 @@ t_flag		ft_conv_id(t_flag modif, va_list args)
 	modif.length += k > modif.width ? k : modif.width;
 	if (modif.preci >= modif.width && nb < 0 && modif.preci >= ft_lgth(nb))
 		modif.length++;
-	return(modif);
+	return (modif);
 }
