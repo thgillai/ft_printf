@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 17:04:28 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/19 14:14:47 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 15:12:47 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static void	ft_conv_id2(t_flag modif, int nb, int k)
 int			ft_conv_ibis(t_flag modif, int i)
 {
 	while (++i < modif.width)
-			ft_putchar(' ');
+		ft_putchar(' ');
 	return (i);
 }
 
