@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 13:30:20 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 17:03:57 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 13:17:18 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_flag		ft_analyzer(const char *s, t_flag modif, va_list args)
 	if (s[modif.i] == 'u')
 		modif = ft_conv_u(modif, args);
 	if (s[modif.i] == 'x' || s[modif.i] == 'X')
-		modif = ft_conv_xX(modif, args, s[modif.i]);
+		modif = ft_conv_x(modif, args, s[modif.i]);
 	if (s[modif.i] == 'p')
 		modif = ft_conv_p(modif, args);
 	modif.minus = 0;

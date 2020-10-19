@@ -6,13 +6,13 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 13:47:59 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/06 17:00:46 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 13:17:37 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
 
-static void			ft_conv1_xX(t_flag modif, long nb, int k, char *base)
+static void			ft_conv1_x(t_flag modif, long nb, int k, char *base)
 {
 	int i;
 
@@ -31,7 +31,7 @@ static void			ft_conv1_xX(t_flag modif, long nb, int k, char *base)
 			ft_putchar(' ');
 }
 
-static void			ft_conv0_xX(t_flag modif, long nb, int k, char *base)
+static void			ft_conv0_x(t_flag modif, long nb, int k, char *base)
 {
 	int i;
 
@@ -50,7 +50,7 @@ static void			ft_conv0_xX(t_flag modif, long nb, int k, char *base)
 		ft_putnbr_base(nb, base, ft_16(nb), modif);
 }
 
-static void			ft_conv2_xX(t_flag modif, long nb, int k, char *base)
+static void			ft_conv2_x(t_flag modif, long nb, int k, char *base)
 {
 	int i;
 
@@ -81,7 +81,7 @@ static	void		ft_25_lignes(t_flag modif)
 		ft_putchar(' ');
 }
 
-t_flag				ft_conv_xX(t_flag modif, va_list args, char c)
+t_flag				ft_conv_x(t_flag modif, va_list args, char c)
 {
 	long	nb;
 	int		k;
@@ -97,11 +97,11 @@ t_flag				ft_conv_xX(t_flag modif, va_list args, char c)
 		return (modif);
 	}
 	if (modif.minus == 1)
-		ft_conv1_xX(modif, nb, k, base);
+		ft_conv1_x(modif, nb, k, base);
 	if (modif.minus == 0 && modif.zero == 0)
-		ft_conv0_xX(modif, nb, k, base);
+		ft_conv0_x(modif, nb, k, base);
 	if (modif.minus == 0 && modif.zero == 1)
-		ft_conv2_xX(modif, nb, k, base);
+		ft_conv2_x(modif, nb, k, base);
 	if (modif.preci >= ft_16(nb) && modif.width < ft_16(nb))
 		ft_putnbr_base(nb, base, ft_16(nb), modif);
 	modif.length += k > modif.width ? k : modif.width;
