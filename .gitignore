@@ -51,5 +51,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# .DS_Store
-.DS_Store
+# Personal gitignore
+.DS_Store/
+.pft_2019/
+.pft
+.42TESTERS-PRINTF
