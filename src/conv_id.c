@@ -6,7 +6,7 @@
 /*   By: thgillai <thgillai@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/29 17:04:28 by thgillai          #+#    #+#             */
-/*   Updated: 2020/10/19 13:50:46 by thgillai         ###   ########.fr       */
+/*   Updated: 2020/10/19 14:14:47 by thgillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,13 @@ static void	ft_conv_id2(t_flag modif, int nb, int k)
 		ft_putnbr(nb, modif.preci, ft_lgth(nb), modif);
 }
 
+int			ft_conv_ibis(t_flag modif, int i)
+{
+	while (++i < modif.width)
+			ft_putchar(' ');
+	return (i);
+}
+
 t_flag		ft_conv_id(t_flag modif, va_list args)
 {
 	int nb;
@@ -90,8 +97,7 @@ t_flag		ft_conv_id(t_flag modif, va_list args)
 	k = modif.preci >= ft_lgth(nb) ? modif.preci : ft_lgth(nb);
 	if (nb == 0 && modif.preci == 0)
 	{
-		while (++i < modif.width)
-			ft_putchar(' ');
+		ft_conv_ibis(modif, i);
 		modif.length += modif.width;
 		return (modif);
 	}

@@ -56,3 +56,5 @@ dkms.conf
 .pft_2019/
 .pft
 .42TESTERS-PRINTF
+.ftprintfdestructor
+.curqui_test
